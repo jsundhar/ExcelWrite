@@ -12,6 +12,10 @@ import org.apache.poi.xssf.streaming.SXSSFWorkbook;
 public class ExcelDataManipulator {
 
 	public static void main(String[] args) {
+		new ExcelDataManipulator().createExcel();
+	}
+	
+	public void createExcel() {
 		SXSSFWorkbook wb =  new SXSSFWorkbook();
 	    String safeName = WorkbookUtil.createSafeSheetName("[Waitrose testcases]"); 
 	    SXSSFSheet sheet = wb.createSheet(safeName);
@@ -39,7 +43,6 @@ public class ExcelDataManipulator {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-
 	}
 	
 }
